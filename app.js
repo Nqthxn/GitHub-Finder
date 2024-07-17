@@ -5,7 +5,7 @@ let username;
 
 //Event listener when user clicks the search button
 search.addEventListener('click', function(){
-    let output = document.querySelector('.output-container');
+    let output = document.querySelector('.output');
     username = input.value; //Username from the input field
 
     //Check if username is empty
@@ -26,24 +26,29 @@ search.addEventListener('click', function(){
         })
         .then(data => {
             if(data){
+                if(data.bio == null){
+                    data.bio = '';
+                }
                 //Displaying User information to the output
                 output.innerHTML = `
-                <div class="profile-container">
-                    <div class="profile-picture-container">
-                        <img src="${data.avatar_url}" class="profile-picture">
-                        <button class="view-profile-btn"><a href="https://github.com/${username}"
-                         target="_blank" class="view-profile">View Profile</a></button>
-                    </div>
-                    <div class="user-info-container">
-                        <div class="username-container">
-                            ${data.login}
+                <div class="output-container">
+                    <div class="profile-container">
+                        <div class="profile-picture-container">
+                            <img src="${data.avatar_url}" class="profile-picture">
+                            <button class="view-profile-btn"><a href="https://github.com/${username}"
+                            target="_blank" class="view-profile">View Profile</a></button>
                         </div>
-                        <div class="job-title-container">
-                            ${data.bio}
-                        </div>
-                        <div class="followers-container">
-                            <span id="followers"> Followers : ${data.followers}</span>
-                            <span id="following"> Following : ${data.following}</span>
+                        <div class="user-info-container">
+                            <div class="username-container">
+                                ${data.login}
+                            </div>
+                            <div class="job-title-container">
+                                ${data.bio}
+                            </div>
+                            <div class="followers-container">
+                                <span id="followers"> Followers : ${data.followers}</span><br>
+                                <span id="following"> Following : ${data.following}</span>
+                            </div>
                         </div>
                     </div>
                 </div>

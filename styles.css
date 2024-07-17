@@ -6,27 +6,96 @@
     flex-direction: column;
     align-items: center;
 }
+body{
+    background-color: lightblue;
+}
 .header{
     align-items: top;
     margin-bottom: 5%;
 }
 *{
     font-family:Arial;
+    margin:0;
 }
 .header{
     font-size:50px;
+    color:green;
+    font-weight: bold;
 }
 .input-container{
     display:flex;
     flex-direction: column;
     width:600px;
+    margin-bottom: 50px;
 }
 .txtInput, .search-btn{
     margin-bottom: 10px;
     padding:10px 30px 10px 30px;
     border-radius: 50px;
+    border:none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 17px;
 }
 .view-profile{
     text-decoration: none;
     color:black;
+}
+.output-container{
+    width:600px;
+    height:100%;
+    margin-bottom: 0;
+    display:flex;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+}
+.profile-picture{
+    width:230px;
+    border-radius: 115px;
+    margin-bottom: 20px;
+    
+}
+.profile-container{
+    display:flex;
+    align-items: center;
+}
+.profile-picture-container{
+    display:flex;
+    flex-direction: column;
+    margin-right: 50px;
+    padding-left: 20px;
+}
+.output{
+    height:50%;
+    width:600px;
+}
+
+.search-btn{
+    cursor:pointer;
+    background-color: yellow;
+}
+.view-profile-btn{
+    border:none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: lightgreen;
+    padding:5px 10px 5px 10px;
+}
+.view-profile{
+    color:darkblue;
+}
+.username-container, .job-title-container, .followers-container{
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+.username-container{
+    font-size: 30px;
+    font-size: bold;
+    color:rgb(255, 0, 81);
+}
+.job-title-container{
+    color:rgb(189, 30, 207);
+}
+.followers-container{
+    color:rgb(233, 154, 56);
 }
