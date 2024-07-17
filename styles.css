@@ -8,7 +8,7 @@
 }
 .header{
     align-items: top;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 *{
     font-family:Arial;
@@ -25,4 +25,8 @@
     margin-bottom: 10px;
     padding:10px 30px 10px 30px;
     border-radius: 50px;
+}
+.view-profile{
+    text-decoration: none;
+    color:black;
 }
