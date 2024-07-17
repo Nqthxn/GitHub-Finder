@@ -3,8 +3,19 @@ const search = document.querySelector('.search-btn');
 
 let username;
 
-//Event listener when user clicks the search button
 search.addEventListener('click', function(){
+    searchGitHub();
+});
+
+input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){
+        searchGitHub();
+    }
+});
+
+
+//Event listener when user clicks the search button
+function searchGitHub(){
     let output = document.querySelector('.output');
     username = input.value; //Username from the input field
 
@@ -59,5 +70,5 @@ search.addEventListener('click', function(){
             console.log(error);
             alert('An error occured while searching for the users data');
         });
-});
+};
 
